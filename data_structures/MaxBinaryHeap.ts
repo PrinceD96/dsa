@@ -1,11 +1,7 @@
 class Node {
-	left: Node | null;
-	right: Node | null;
 	value: number;
 
 	constructor(value: number) {
-		this.left = null;
-		this.right = null;
 		this.value = value;
 	}
 }

@@ -1,4 +1,4 @@
-type NodeValue = string | number;
+import { NodeValue } from 'types';
 
 class Node {
 	value: NodeValue;
@@ -38,7 +38,7 @@ class PriorityQueue {
 			let currentNum = this.nodes[numIndex];
 
 			if (currentNum.priority >= parent.priority) break;
-			const temp = {...parent};
+			const temp = { ...parent };
 			this.nodes[parentIndex] = currentNum;
 			this.nodes[numIndex] = temp;
 			numIndex = parentIndex;
@@ -48,7 +48,7 @@ class PriorityQueue {
 	}
 
 	dequeue(): Node | null {
-		const rootNode = this.nodes[0] ? {...this.nodes[0]} : null;
+		const rootNode = this.nodes[0] ? { ...this.nodes[0] } : null;
 		const endNode = this.nodes.pop() ?? null;
 
 		if (this.nodes.length && endNode) {

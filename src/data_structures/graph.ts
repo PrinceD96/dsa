@@ -1,13 +1,13 @@
 import { AdjacencyList, NodeValue } from 'types';
 
-class Vertex {
+export class Vertex {
 	name: NodeValue;
 	constructor(name: NodeValue) {
 		this.name = name;
 	}
 }
 
-class Graph {
+export class Graph {
 	adjacencyList: AdjacencyList;
 	constructor() {
 		this.adjacencyList = {};
@@ -162,5 +162,3 @@ graph;
 graph.recursiveDepthFirstTraversal('A');
 graph.iterativeDepthFirstTraversal('A');
 graph.iterativeBreadthFirstTraversal('A');
-
-export {};
